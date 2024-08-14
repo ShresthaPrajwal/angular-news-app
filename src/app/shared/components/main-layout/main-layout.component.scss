@@ -1,0 +1,28 @@
+.news-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px; /* Space between headline and side cards */
+}
+
+.headline {
+  flex: 2; /* Takes more space */
+}
+
+.headline-card {
+  width: 100%;
+}
+
+.headline-title {
+  font-size: 32px;
+  margin: 0 0 16px 0;
+}
+
+.headline-description {
+  font-size: 18px;
+  color: #555;
+}
+
+.side-cards {
+  flex: 1;
+  flex-direction: column;
+}

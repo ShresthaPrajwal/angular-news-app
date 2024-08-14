@@ -1,0 +1,37 @@
+.news-card {
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.news-content {
+  display: flex;
+  align-items: center;
+}
+
+.news-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.news-text {
+  flex: 1;
+  padding: 16px;
+}
+
+.news-description {
+  font-size: 16px;
+  color: #000; /* Black color for the text */
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.news-description a {
+  text-decoration: none; /* Remove underline */
+  color: #2e3031; /* Grey color for the link */
+}
+
+.news-description a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}

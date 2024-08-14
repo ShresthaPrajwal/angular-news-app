@@ -1,0 +1,31 @@
+.head-card {
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.details-section {
+  padding: 16px;
+}
+
+.news-details {
+  font-size: 22px;
+  color: #000;
+  text-transform: capitalize;
+  margin: 0;
+  text-decoration: none;
+}
+.news-details:hover {
+  text-decoration: underline;
+}
