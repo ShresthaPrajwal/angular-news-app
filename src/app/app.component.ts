@@ -7,11 +7,21 @@ import { BookService } from './shared/services/books_service/book.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit{
   constructor(private ts: TopStoriesService, private bs: BookService) {
   }
 
   ngOnInit(): void {
+    this.ts.fetchTopStories('arts').subscribe((result)=>{
+      console.log('Arts',result)
+    })
 
+    this.bs.fetchBookListNames().subscribe(res=>{
+      console.log(res)
+    })
+
+    this.bs.fetchSpecificBookList('hardcover-fiction','2024-08-11').subscribe(res=>{
+      console.log(res)
+    })
   }
 }

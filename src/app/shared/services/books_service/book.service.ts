@@ -33,4 +33,27 @@ export class BookService {
     const url = `${this.BOOK_ENDPOINT}/lists.json?api-key=${this.apiKey}`;
     return this.http.get(url, { params });
   }
+
+  public getFullOverview(publishedDate?: string): Observable<any>{
+
+    let params = new HttpParams();
+    if(publishedDate){
+      params = params.set('published-date',publishedDate);
+    }
+
+    const url = `${this.BOOK_ENDPOINT}/lists/full-overview.json?api-key=${this.apiKey}`;
+    return this.http.get(url,{ params });
+  }
+
+  public getReviews(title: string, author?: string, isbn?: number): Observable<any>{
+    let url = `${this.BOOK_ENDPOINT}/reviews.json?api-key=${this.apiKey}`;
+    let params = new HttpParams().set('title',title);
+    if(isbn){
+      params = params.set('isbn',isbn)
+    }
+    if(author){
+      params = params.set('author',author)
+    }
+    return this.http.get(url,{ params });
+  }
 }
