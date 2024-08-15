@@ -1,4 +1,9 @@
-.top-stories-container{
+h1{
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.most-popular-container{
     display: flex;
     justify-content: center;
     background-color: #F6F8FC;
@@ -8,3 +13,105 @@
     background-color: white;
     width: 80%;
 }
+.toggle-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .mat-button-toggle-group {
+    background: #f0f0f0;
+    border-radius: 4px;
+  }
+  
+  .articles-section {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .article-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .article-card {
+    margin: 20px;
+    max-width: 800px;
+    max-height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    // transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+//   .article-card:hover {
+//     // transform: scale(1.02);
+//     // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+//   }
+  
+  mat-card {
+    margin-bottom: 20px;
+  }
+  
+  mat-card-title {
+    font-size: 1.2em;
+  }
+  
+  mat-card-subtitle {
+    font-size: 0.9em;
+    color: #e43636;
+  }
+  
+  mat-card-content p {
+    font-size: 1em;
+    color: #333;
+  }
+  
+  img {
+    width: 100%;
+    height:fit-content;
+  }
+
+// .card {
+//     border: none;
+//     box-shadow: none;
+//     padding: 0;
+//     margin: 0;
+//     background-color: white;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//   }
+  
+//   .card-header {
+//     margin-bottom: 10px;
+//     padding: 2rem;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//   }
+  
+//   .card-title {
+//     font-size: 1.5em;
+//     margin: 0;
+//     text-align: center;
+//   }
+  
+//   .card-subtitle {
+//     font-size: 1em;
+//     color: gray;
+//     margin: 0;
+//   }
+  
+//   .card-image {
+//     width: 150px;
+//     height: 100px;
+//     object-fit: cover;
+//     display: block;
+//     margin-bottom: 10px;
+//     border-radius: 1rem;
+//   }
+  
+  
