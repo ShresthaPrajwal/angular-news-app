@@ -1,6 +1,6 @@
-//*{
-//   border: 1px solid red;
-//}
+// *{
+// //   border: 1px solid red;
+// }
 .header {
     display: flex;
     align-items: start;
@@ -8,17 +8,12 @@
     padding: 10px;
 }  
 .logo {
-    position: absolute;
-    left: 1rem;
-    width: 3rem;
+    width: 2rem;
     height: auto;
 } 
 .search-field {
-    flex: 1;
-    max-width: 50%;
+    width: 50%;
     margin-left: 4rem;
-    margin-bottom: 0;
-    padding: 0;
 } 
 .search-icon{
     height: 24px;
