@@ -1,7 +1,21 @@
 <div class="top-stories-container">
-  <div class="inner-container">
+  <div class="top-stories-content">
+    <div class="stories-chips">
+      <mat-chip-listbox>
+        <mat-chip-option
+          *ngFor="let category of categories"
+          (click)="onTypeChange(category)"
+        >
+          {{ category }}
+        </mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+
     <div class="first-row-container">
-    <app-top-stories-card [stories]="topTenStories" [title]="'Top 10 Stories'"> </app-top-stories-card>
+      <app-top-stories-card
+        [stories]="topTenStories"
+        [title]="'Top Stories'"
+      ></app-top-stories-card>
     </div>
   </div>
 </div>

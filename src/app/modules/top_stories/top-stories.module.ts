@@ -5,6 +5,7 @@ import { TopStoriesCardComponent } from './card/top-stories-card/top-stories-car
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider'
+import { MatChipsModule } from '@angular/material/chips';
 
 import { IndividualCardComponent } from './card/individual-card/individual-card.component';
 import { IndividualTitleCardComponent } from './card/individual-title-card/individual-title-card.component'
@@ -21,7 +22,8 @@ import { IndividualTitleCardComponent } from './card/individual-title-card/indiv
     CommonModule,
     MatListModule,
     MatDividerModule,
-    MatCardModule
+    MatCardModule,
+    MatChipsModule
   ],
   exports:[TopStoriesComponent]
 })

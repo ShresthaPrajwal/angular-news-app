@@ -10,6 +10,35 @@ export class TopStoriesComponent implements OnInit{
 
   public topStories ?: any;
   public topTenStories ?: any;
+  public selectedType: string = 'Arts';
+  public categories: string[] = [
+    'Arts',
+    'Automobiles',
+    'Books/Review',
+    'Business',
+    'Fashion',
+    'Food',
+    'Health',
+    'Home',
+    'Insider',
+    'Magazine',
+    'Movies',
+    'NYRegion',
+    'Obituaries',
+    'Opinion',
+    'Politics',
+    'RealEstate',
+    'Science',
+    'Sports',
+    'SundayReview',
+    'Technology',
+    'Theater',
+    'T-Magazine',
+    'Travel',
+    'Upshot',
+    'US',
+    'World'
+  ];
   constructor(private TopStoriesService: TopStoriesService){}
   ngOnInit(): void {
     this.TopStoriesService.fetchTopStories('Arts').subscribe(res=>{
@@ -18,4 +47,19 @@ export class TopStoriesComponent implements OnInit{
       console.log('res',this.topTenStories)
     })
   }
+
+  public fetchTopStories(type: string): void {
+    this.TopStoriesService.fetchTopStories(type).subscribe(res => {
+      this.topStories = res.results;
+      if(this.topStories.length>10) this.topTenStories = this.topStories.slice(0, 10);
+      else this.topTenStories = this.topStories
+      console.log('res', this.topTenStories);
+    });
+  }
+
+  public onTypeChange(type: string): void {
+    this.selectedType = type;
+    this.fetchTopStories(type);
+  }
+
 }
