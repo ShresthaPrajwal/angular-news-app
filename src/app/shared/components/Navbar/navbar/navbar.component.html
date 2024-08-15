@@ -1,0 +1,22 @@
+<div class="navbar-component">
+  <div class="header">
+    <mat-form-field class="search-field" appearance="outline">
+      <mat-icon matPrefix>
+        <img
+          src="../../../../../assets/icons/search.png"
+          class="search-icon"
+          alt="Search Icon"
+        />
+      </mat-icon>
+      <mat-label> Search News </mat-label>
+      <input matInput placeholder="Eg: Sports News" class="input-field" />
+    </mat-form-field>
+  </div>
+  
+  <div class="route-lists">
+    <button *ngFor="let route of routeList" mat-flat-button (click)="navigateTo(route)">
+        {{route | titlecase}}
+    </button>
+  </div>
+
+</div>
