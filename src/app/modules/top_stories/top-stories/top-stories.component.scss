@@ -1,10 +1,17 @@
 .top-stories-container{
     display: flex;
     justify-content: center;
-    background-color: #F6F8FC;
+    background-color: #000000;
 }
 .inner-container{
     margin: 3rem;
-    background-color: white;
     width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.first-row-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

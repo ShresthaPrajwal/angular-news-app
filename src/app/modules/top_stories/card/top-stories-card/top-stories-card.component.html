@@ -1,0 +1,14 @@
+<div class="top-stories-list">
+  <div class="top-stories-list-title">
+    <h2>{{ title | uppercase }}</h2>
+  </div>
+  <app-individual-title-card
+    *ngFor="let story of stories; let last = last"
+    [image]="story?.multimedia[0]?.url"
+    [title]="story.title"
+    [abstract]="story.abstract"
+    [date]="story.published_date"
+  >
+    <mat-divider *ngIf="!last"></mat-divider>
+  </app-individual-title-card>
+</div>
