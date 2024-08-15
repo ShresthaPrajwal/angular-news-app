@@ -1,18 +1,22 @@
-<div class="header">
+<div class="navbar-component">
+  <div class="header">
     <mat-form-field class="search-field" appearance="outline">
-        <mat-icon matPrefix>
-            <img src="../../../../../assets/icons/search.png" class="search-icon" alt="Search Icon">
-        </mat-icon>
-        <mat-label> Search News </mat-label>
-        <input matInput placeholder="Eg: Sports News" class="input-field">
+      <mat-icon matPrefix>
+        <img
+          src="../../../../../assets/icons/search.png"
+          class="search-icon"
+          alt="Search Icon"
+        />
+      </mat-icon>
+      <mat-label> Search News </mat-label>
+      <input matInput placeholder="Eg: Sports News" class="input-field" />
     </mat-form-field>
-</div>  
-<mat-tab-group class="tabs">
-    <mat-tab label="Top Stories"> Content 1 </mat-tab>
-    <mat-tab label="Most Popular"> Content 2 </mat-tab>
-    <mat-tab label="Books"> Content 3 
+  </div>
+  
+  <div class="route-lists">
+    <button *ngFor="let route of routeList" mat-flat-button (click)="navigateTo(route)">
+        {{route | titlecase}}
+    </button>
+  </div>
 
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum veniam aut, voluptatibus ab cum officia adipisci debitis temporibus quisquam, earum accusamus. Repellendus voluptate vel asperiores accusantium obcaecati necessitatibus unde quis.
-    </mat-tab>
-</mat-tab-group>
+</div>

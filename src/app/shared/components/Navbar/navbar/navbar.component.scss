@@ -1,6 +1,15 @@
 // *{
 // //   border: 1px solid red;
 // }
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper{
+    display: none !important;
+}
+.navbar-component{
+    position: sticky;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
 .header {
     display: flex;
     align-items: start;
@@ -21,4 +30,9 @@
 }
 .tabs {
     margin: 0 6rem;
+}
+
+.route-lists{
+    display: flex;
+    justify-content: center;
 }

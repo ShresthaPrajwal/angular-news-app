@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TopStoriesService } from './shared/services/news_services/top-stories.service';
-import { BookService } from './shared/services/books_service/book.service';
+import { BookService } from './services/books_service/book.service';
 import { MostPopularService } from './shared/services/news_services/most-popular.service';
 
 @Component({

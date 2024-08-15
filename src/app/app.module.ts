@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
+import { TopStoriesModule } from './modules/top_stories/top-stories.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { MatDividerModule } from '@angular/material/divider';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    TopStoriesModule,
     MatButtonModule,
     MatTabsModule,
     MatInputModule,
