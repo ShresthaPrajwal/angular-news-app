@@ -39,4 +39,4 @@ import { TopStoriesModule } from './modules/top_stories/top-stories.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
