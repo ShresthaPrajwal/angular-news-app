@@ -9,7 +9,12 @@
       />
     </div>
     <div class="details-section">
-      <a href="" class="news-details">{{ data.description }}</a>
+      <p class="news-title mat-display-large">{{ data.title }}</p>
+      <a [href]="data.url" class="news-desc">{{ data.description }}</a>
+      <div class="news-bottom">
+        <p class="news-time">4 hour ago</p>
+        <p class="news-author">&#x2022;Ram Singh</p>
+      </div>
     </div>
   </mat-card-content>
 </mat-card>

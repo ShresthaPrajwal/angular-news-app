@@ -13,19 +13,31 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 0px !important;
 }
 
 .details-section {
-  padding: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
-.news-details {
-  font-size: 22px;
+.news-title {
+  font-size: 30px;
   color: #000;
   text-transform: capitalize;
   margin: 0;
   text-decoration: none;
+  padding: 5px;
 }
-.news-details:hover {
+.news-desc {
+  color: rgb(54, 54, 54);
+  text-decoration: none;
+  padding: 5px;
+}
+.news-desc:hover {
   text-decoration: underline;
+}
+.news-bottom p {
+  display: inline;
+  padding: 5px;
 }
