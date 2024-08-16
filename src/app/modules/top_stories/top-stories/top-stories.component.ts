@@ -45,7 +45,7 @@ export class TopStoriesComponent implements OnInit{
     this.TopStoriesService.fetchTopStories('Arts').subscribe(res=>{
       this.topStories= res.results;
       this.topTenStories = this.topStories.slice(0,10);
-      this.defaultStories = this.topStories.slice(0,7);
+      this.defaultStories = this.topStories.slice(0,8);
       console.log('res',this.topTenStories)
     })
   }

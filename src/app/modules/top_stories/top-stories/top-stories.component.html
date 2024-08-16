@@ -1,23 +1,25 @@
 <div class="top-stories-container">
   <div class="top-stories-content">
     <div class="default-stories">
-      <div class="default-stories-card"  *ngFor="let story of defaultStories; let last = last">
+      <div class="default-stories-card"
+           *ngFor="let story of defaultStories; let first = first; let last = last"
+           [ngClass]="{'first-card': first, 'last-card': last}">
         <app-individual-card
-        [image]="story?.multimedia[0]?.url || ''"
-        [title]="story?.title || ''"
-        [abstract]="story?.abstract || ''"
-        [date]="story?.published_date || ''"
-      >
-      </app-individual-card>
+          [image]="story?.multimedia[0]?.url || ''"
+          [title]="story?.title || ''"
+          [abstract]="story?.abstract || ''"
+          [date]="story?.published_date || ''">
+        </app-individual-card>
       </div>
     </div>
-
+    <div class="more-stories-chip">
+      <h2>More Topics</h2>
+    </div>
     <div class="stories-chips">
       <mat-chip-listbox>
         <mat-chip-option
           *ngFor="let category of categories"
-          (click)="onTypeChange(category)"
-        >
+          (click)="onTypeChange(category)">
           {{ category }}
         </mat-chip-option>
       </mat-chip-listbox>
@@ -26,8 +28,8 @@
     <div class="first-row-container">
       <app-top-stories-card
         [stories]="topTenStories"
-        [title]="'Top Stories'"
-      ></app-top-stories-card>
+        [title]="'Top Stories'">
+      </app-top-stories-card>
     </div>
   </div>
 </div>
