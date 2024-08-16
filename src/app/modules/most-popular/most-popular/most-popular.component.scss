@@ -10,6 +10,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 80%;
+  padding: 2em;
+  border-radius: 20px;
 }
 
 .inner-card-container{
@@ -28,6 +31,11 @@
 .articles-section {
   width: 40%;
 }
+.toggle-div{
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
 .toggle-group {
   display: flex;
   justify-content: center;
@@ -36,7 +44,6 @@
 }
 
 .mat-button-toggle-group {
-  // background: #f0f0f0;
   border-radius: 10px;
 }
 

@@ -1,5 +1,17 @@
 <div class="most-popular-container">
   <div class="inner-container">
+    <div class="toggle-div">
+      <mat-button-toggle-group
+      name="type"
+      aria-label="Select type"
+      [(value)]="selectedType"
+      class="toggle-group"
+      style="width: fit-content"
+    >
+      <mat-button-toggle value="emailed">Emailed</mat-button-toggle>
+      <mat-button-toggle value="shared">Shared</mat-button-toggle>
+      <mat-button-toggle value="viewed">Viewed</mat-button-toggle>
+    </mat-button-toggle-group>
     <mat-button-toggle-group
       name="period"
       aria-label="Select period"
@@ -11,12 +23,17 @@
       <mat-button-toggle value="week">Week</mat-button-toggle>
       <mat-button-toggle value="month">Month</mat-button-toggle>
     </mat-button-toggle-group>
+    </div>
 
     <div class="inner-card-container">
       <div class="inner-cards">
         <div
           class="articles-section"
-          *ngFor="let story of getStoriesForPeriod(); let first = first; let last = last"
+          *ngFor="
+            let story of getStoriesForPeriod();
+            let first = first;
+            let last = last
+          "
           [ngClass]="{ 'first-card': first, 'last-card': last }"
         >
           <app-individual-card
@@ -30,6 +47,5 @@
         </div>
       </div>
     </div>
-    
   </div>
 </div>
