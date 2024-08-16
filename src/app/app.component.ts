@@ -17,9 +17,9 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.ts.fetchTopStories('arts').subscribe((result) => {
-      console.log('Arts', result)
-    })
+    // this.ts.fetchTopStories('arts').subscribe((result)=>{
+    //   console.log('Arts',result)
+    // })
 
     // this.bs.fetchBookListNames().subscribe(res=>{
     //   console.log(res)
@@ -29,8 +29,8 @@ export class AppComponent implements OnInit {
     //   console.log(res)
     // })
 
-    this.ps.fetchMostPopularShared(1).subscribe((res) => {
-      console.log(res)
-    })
+    // this.ps.fetchMostPopularShared(1).subscribe((res)=>{
+    //   console.log(res)
+    // })
   }
 }

@@ -1,0 +1,20 @@
+<div class="top-stories-list">
+  <div class="top-stories-list-title">
+    <h2>{{ title | uppercase }}</h2>
+  </div>
+  <app-individual-title-card
+    *ngFor="let story of sanitizedStories; let last = last"
+    [image]="story?.multimedia[0]?.url || ''"
+    [title]="story?.title || ''"
+    [abstract]="story?.abstract || ''"
+    [date]="story?.published_date || ''"
+    [url]="story?.url"
+  >
+    <mat-divider *ngIf="!last"></mat-divider>
+  </app-individual-title-card>
+  <div class="more-button-container">
+    <button mat-icon-button>
+      <mat-icon>more_horiz</mat-icon>
+    </button>
+  </div>
+</div>

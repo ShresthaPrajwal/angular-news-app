@@ -1,0 +1,70 @@
+.card {
+  /* Remove default browser styling */
+  border: none;
+  box-shadow: none;
+  padding: 1em;
+  margin: 1em;
+  background-color: white;
+  border-radius: 2rem;
+}
+
+.card-header {
+  margin-bottom: 10px;
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: 1em;
+  padding: 1rem;
+  color: gray;
+  margin: 0;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 1em;
+  padding: 1rem;
+
+}
+
+.card-wrapper {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .card {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-wrapper:visited .card,
+  .card-wrapper:hover .card {
+    color: inherit;
+  }
+  

@@ -1,0 +1,18 @@
+<a
+  *ngIf="url"
+  [href]="url"
+  class="card-wrapper"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <div class="card">
+    <div class="card-header">
+      <h1 class="card-title">{{ title }}</h1>
+      <h2 class="card-subtitle">{{ date | date: 'fullDate' }}</h2>
+    </div>
+    <img class="card-image" [src]="image" alt="{{ title }}" />
+    <div class="card-content">
+      <p>{{ abstract }}</p>
+    </div>
+  </div>
+</a>
