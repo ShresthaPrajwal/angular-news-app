@@ -15,6 +15,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { TopStoriesModule } from './modules/top_stories/top-stories.module';
+import { MostPopularModule } from './modules/most-popular/most-popular.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import { TopStoriesModule } from './modules/top_stories/top-stories.module';
     MatFormFieldModule,
     MatIconModule,
     MatToolbarModule,
-    MatDividerModule
+    MatDividerModule,
+    MostPopularModule
   ],
   providers: [
     provideAnimationsAsync(),
