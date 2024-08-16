@@ -10,7 +10,7 @@ export class TopStoriesComponent implements OnInit{
 
   public topStories ?: any;
   public topTenStories ?: any;
-  public selectedType: string = 'Arts';
+  public selectedType: string = 'Home';
   public categories: string[] = [
     'Arts',
     'Automobiles',
@@ -39,11 +39,13 @@ export class TopStoriesComponent implements OnInit{
     'US',
     'World'
   ];
+  public defaultStories: any[] = [];
   constructor(private TopStoriesService: TopStoriesService){}
   ngOnInit(): void {
     this.TopStoriesService.fetchTopStories('Arts').subscribe(res=>{
       this.topStories= res.results;
       this.topTenStories = this.topStories.slice(0,10);
+      this.defaultStories = this.topStories.slice(0,7);
       console.log('res',this.topTenStories)
     })
   }

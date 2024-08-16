@@ -8,6 +8,20 @@
 .top-stories-content{
     width: 80%;
 }
+
+.default-stories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: start;
+    margin:1em;
+}
+
+.default-stories-card{
+    width: 40%;
+}
+
 .stories-chips{
     display: flex;
     flex-direction: row;
@@ -23,9 +37,7 @@
 .inner-container {
   margin: 3rem 0rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-// *{
-//     border: 1px solid red;
-// }

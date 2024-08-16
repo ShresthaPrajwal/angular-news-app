@@ -1,5 +1,17 @@
 <div class="top-stories-container">
   <div class="top-stories-content">
+    <div class="default-stories">
+      <div class="default-stories-card"  *ngFor="let story of defaultStories; let last = last">
+        <app-individual-card
+        [image]="story?.multimedia[0]?.url || ''"
+        [title]="story?.title || ''"
+        [abstract]="story?.abstract || ''"
+        [date]="story?.published_date || ''"
+      >
+      </app-individual-card>
+      </div>
+    </div>
+
     <div class="stories-chips">
       <mat-chip-listbox>
         <mat-chip-option

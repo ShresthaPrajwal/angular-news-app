@@ -1,7 +1,10 @@
-<div class="card">
-  <div class="card-header">
-    <h1 class="card-title">{{ title }}</h1>
-    <h2 class="card-subtitle">{{ date | date: 'fullDate' }}</h2>
-  </div>
-  <img class="card-image" [src]="image" alt="{{ title }}" />
-</div>
+<a class="card-link" (click)="onCardClick()">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">{{ title }}</h1>
+        <h2 class="card-subtitle">{{ date | date: 'fullDate' }}</h2>
+      </div>
+      <img class="card-image" [src]="image" alt="{{ title }}" />
+    </div>
+  </a>
+  

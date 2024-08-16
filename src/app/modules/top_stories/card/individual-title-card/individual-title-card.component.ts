@@ -10,5 +10,11 @@ export class IndividualTitleCardComponent {
   @Input() public title?: string;
   @Input() public abstract?: string;
   @Input() public date?: string;
+  @Input() public url?: string;
   constructor(){}
+  public onCardClick(): void {
+    if (this.url) {
+      window.open(this.url);
+    }
+  }
 }

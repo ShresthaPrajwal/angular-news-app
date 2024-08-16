@@ -1,3 +1,7 @@
+a{
+    color: black;
+}
+
 .card {
   border: none;
   box-shadow: none;
@@ -35,4 +39,17 @@
   display: block;
   margin-bottom: 10px;
   border-radius: 1rem;
+}
+.card-link {
+  display: block;
+  text-decoration: none;
+}
+
+.card {
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

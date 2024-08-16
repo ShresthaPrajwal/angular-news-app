@@ -9,6 +9,8 @@ import { MatChipsModule } from '@angular/material/chips';
 
 import { IndividualCardComponent } from './card/individual-card/individual-card.component';
 import { IndividualTitleCardComponent } from './card/individual-title-card/individual-title-card.component'
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -22,8 +24,10 @@ import { IndividualTitleCardComponent } from './card/individual-title-card/indiv
     CommonModule,
     MatListModule,
     MatDividerModule,
+    MatButtonModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatIconModule
   ],
   exports:[TopStoriesComponent]
 })

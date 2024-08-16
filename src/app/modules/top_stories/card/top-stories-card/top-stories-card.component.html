@@ -8,7 +8,13 @@
     [title]="story?.title || ''"
     [abstract]="story?.abstract || ''"
     [date]="story?.published_date || ''"
+    [url]="story?.url"
   >
     <mat-divider *ngIf="!last"></mat-divider>
   </app-individual-title-card>
+  <div class="more-button-container">
+    <button mat-icon-button>
+      <mat-icon>more_horiz</mat-icon>
+    </button>
+  </div>
 </div>
