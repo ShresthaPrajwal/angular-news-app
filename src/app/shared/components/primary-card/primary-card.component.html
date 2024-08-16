@@ -1,0 +1,15 @@
+<mat-card class="news-card">
+  <mat-card-content class="news-content">
+    <img
+      mat-card-image
+      class="news-photo"
+      [src]="data.image"
+      alt="News Photo"
+    />
+    <div class="news-text">
+      <p class="news-description">
+        <a href="https://example.com" target="_blank">{{ data.description }}</a>
+      </p>
+    </div>
+  </mat-card-content>
+</mat-card>
