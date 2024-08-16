@@ -16,6 +16,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { TopStoriesModule } from './modules/top_stories/top-stories.module';
 import { MostPopularModule } from './modules/most-popular/most-popular.module';
+import { IndividualCardComponent } from './shared/components/individual-card/individual-card.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,7 @@ import { MostPopularModule } from './modules/most-popular/most-popular.module';
     MatIconModule,
     MatToolbarModule,
     MatDividerModule,
-    MostPopularModule
+    MostPopularModule,
   ],
   providers: [
     provideAnimationsAsync(),

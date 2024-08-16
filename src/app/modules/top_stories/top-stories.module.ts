@@ -7,17 +7,17 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider'
 import { MatChipsModule } from '@angular/material/chips';
 
-import { IndividualCardComponent } from './card/individual-card/individual-card.component';
+import { IndividualCardComponent } from '../../shared/components/individual-card/individual-card.component';
 import { IndividualTitleCardComponent } from './card/individual-title-card/individual-title-card.component'
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
   declarations: [
     TopStoriesComponent,
     TopStoriesCardComponent,
-    IndividualCardComponent,
     IndividualTitleCardComponent
   ],
   imports: [
@@ -27,7 +27,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatCardModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    SharedModule
   ],
   exports:[TopStoriesComponent]
 })

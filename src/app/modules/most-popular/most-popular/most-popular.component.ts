@@ -8,13 +8,13 @@ import { SnackbarService } from '../../../shared/services/snackbar-service/snack
   styleUrl: './most-popular.component.scss'
 })
 export class MostPopularComponent implements OnInit {
-  public mostPopularEmailedperDay:any[]=[];
-  public mostPopularEmailedperWeek:any[]=[];
-  public mostPopularEmailedperMonth:any[]=[];
+  public mostPopularEmailedperDay: any[] = [];
+  public mostPopularEmailedperWeek: any[] = [];
+  public mostPopularEmailedperMonth: any[] = [];
   public selectedPeriod: 'day' | 'week' | 'month' = 'day';
 
 
-  constructor(private mostPopularService: MostPopularService, private SnackBarService:SnackbarService) {}
+  constructor(private mostPopularService: MostPopularService, private SnackBarService: SnackbarService) { }
   ngOnInit(): void {
     this.getMostPopularEmailedPerDay();
     this.getMostPopularEmailedPerMonth();
@@ -26,6 +26,8 @@ export class MostPopularComponent implements OnInit {
     this.mostPopularService.fetchMostPopularEmailed(1).subscribe(
       (data) => {
         this.mostPopularEmailedperDay = data.results.slice(10);
+        console.log('raja', this.mostPopularEmailedperDay)
+
         this.SnackBarService.showMessage('Here are the top 10 most popular news');
       },
       (error) => {
@@ -53,5 +55,18 @@ export class MostPopularComponent implements OnInit {
         this.SnackBarService.showMessage('Error in fetching the data');
       }
     );
+  }
+
+  getStoriesForPeriod() {
+    switch (this.selectedPeriod) {
+      case 'day':
+        return this.mostPopularEmailedperDay;
+      case 'week':
+        return this.mostPopularEmailedperWeek;
+      case 'month':
+        return this.mostPopularEmailedperMonth;
+      default:
+        return [];
+    }
   }
 }
