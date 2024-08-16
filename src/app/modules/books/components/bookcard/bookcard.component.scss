@@ -1,0 +1,41 @@
+.book-card {
+  max-width: 200px;
+
+  overflow: hidden;
+  cursor: pointer;
+}
+.book-card {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-section {
+  position: relative;
+}
+
+.book-image {
+  width: 100%;
+
+  height: auto;
+  object-fit: cover;
+}
+
+.title-section {
+  padding: 16px;
+}
+
+.book-title {
+  font-size: 0.8rem;
+
+  color: #333;
+  margin: 0;
+}

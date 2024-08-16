@@ -1,0 +1,15 @@
+<mat-card class="book-card">
+  <div class="book-details">
+    <h2>Rank #{{ rank }}</h2>
+    <h3>{{ title }}</h3>
+    <p><strong>Author:</strong> {{ author }}</p>
+    <p><strong>Publisher:</strong> {{ publisher }}</p>
+    <p>{{ description }}</p>
+    <a [href]="amazonLink" target="_blank"
+      ><button mat-flat-button color="primary">Buy</button></a
+    >
+  </div>
+  <div class="book-image">
+    <img [src]="imageUrl" alt="{{ title }} book cover" />
+  </div>
+</mat-card>

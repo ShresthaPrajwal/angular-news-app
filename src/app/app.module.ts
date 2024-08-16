@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'
 import { MatButtonModule } from '@angular/material/button'
 import { TopStoriesService } from './shared/services/news_services/top-stories.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,7 +24,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    HeadCardComponent,
+    PrimaryCardComponent,
+    MainLayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,10 +42,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     MatDividerModule,
     MostPopularModule,
   ],
-  providers: [
-    provideAnimationsAsync(),
-    TopStoriesService
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideAnimationsAsync(), TopStoriesService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

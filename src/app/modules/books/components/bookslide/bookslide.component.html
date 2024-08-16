@@ -1,0 +1,16 @@
+<div class="carousel-container">
+  <mat-grid-list cols="5" rowHeight="1:1.5">
+    <mat-grid-tile *ngFor="let book of getCurrentBooks()">
+      <div class="carousel-content">
+        <app-bookcard [book]="book"></app-bookcard>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <button mat-button class="nav-btn prev-btn" (click)="prevSlide()">
+    &#10094;
+  </button>
+  <button mat-button class="nav-btn next-btn" (click)="nextSlide()">
+    &#10095;
+  </button>
+</div>

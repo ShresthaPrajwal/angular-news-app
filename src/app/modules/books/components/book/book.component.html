@@ -1,0 +1,32 @@
+<div class="book-main">
+  <div class="book-header">
+    <h2>Top {{ selectedGenre }} Books</h2>
+    <div class="genre-select">
+      <mat-form-field (click)="removeLabel()">
+        <mat-label *ngIf="!isClicked">Select Genre</mat-label>
+        <mat-select
+          [(ngModel)]="selectedGenre"
+          (selectionChange)="changeBook()"
+        >
+          <mat-option *ngFor="let genre of genres" [value]="genre.list_name">
+            {{ genre.list_name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <app-bookslide [books]="book1"></app-bookslide>
+  <h2 class="trending-topic">Top Trending</h2>
+  <div *ngFor="let book of book1" id="book-detail">
+    <app-booklarge
+      [rank]="book.rank"
+      [author]="book.author"
+      [description]="book.description"
+      [author]="book.author"
+      [imageUrl]="book.book_image"
+      [publisher]="book.publisher"
+      [amazonLink]="book.amazon_product_url"
+    ></app-booklarge>
+  </div>
+</div>

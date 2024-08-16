@@ -1,0 +1,49 @@
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.carousel-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-grid-list {
+  width: 100%;
+  height: auto;
+}
+
+mat-grid-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+app-bookcard {
+  width: 100%;
+  max-width: 160px;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: black;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}

@@ -1,16 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { TopStoriesService } from './shared/services/news_services/top-stories.service';
-import { BookService } from './services/books_service/book.service';
-import { MostPopularService } from './shared/services/news_services/most-popular.service';
+import { Component, OnInit } from '@angular/core'
+import { TopStoriesService } from './shared/services/news_services/top-stories.service'
+
+import { MostPopularService } from './shared/services/news_services/most-popular.service'
+import { BookService } from './shared/services/books_service/book.service'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit{
-  constructor(private ts: TopStoriesService, private bs: BookService, private ps: MostPopularService) {
-  }
+export class AppComponent implements OnInit {
+  constructor(
+    private ts: TopStoriesService,
+    private bs: BookService,
+    private ps: MostPopularService
+  ) {}
 
   ngOnInit(): void {
     // this.ts.fetchTopStories('arts').subscribe((result)=>{
