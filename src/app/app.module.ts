@@ -18,11 +18,13 @@ import { TopStoriesModule } from './modules/top_stories/top-stories.module';
 import { MostPopularModule } from './modules/most-popular/most-popular.module';
 import { IndividualCardComponent } from './shared/components/individual-card/individual-card.component';
 import { SharedModule } from './shared/shared.module';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
