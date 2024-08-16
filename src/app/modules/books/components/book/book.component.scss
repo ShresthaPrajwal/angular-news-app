@@ -2,3 +2,13 @@ div {
   width: 90%;
   margin: 10px auto;
 }
+.genre-select {
+  max-width: 300px;
+
+  .mat-mdc-form-field {
+    width: 100%;
+  }
+}
+.selection {
+  width: 100%;
+}

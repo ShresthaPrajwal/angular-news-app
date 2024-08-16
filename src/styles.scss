@@ -33,10 +33,7 @@ $angular_group_project-theme: mat.define-light-theme(
       accent: $angular_group_project-accent,
       warn: $angular_group_project-warn,
     ),
-    typography:
-      mat.define-typography-config(
-        $font-family: 'Comic Sans',
-      ),
+    typography: mat.define-typography-config(),
     density: 0,
   )
 );
@@ -48,5 +45,12 @@ $angular_group_project-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: lato, "Helvetica Neue", sans-serif; font: weight 800;}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: lato, 'Helvetica Neue', sans-serif;
+  font: weight 800;
+}

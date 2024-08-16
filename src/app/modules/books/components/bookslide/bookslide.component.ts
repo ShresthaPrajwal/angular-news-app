@@ -24,7 +24,7 @@ export class BookslideComponent {
     if ((this.currentIndex + 1) * this.booksPerSlide < this.books.length) {
       this.currentIndex++
     } else {
-      this.currentIndex = 0 // Go back to the first set if at the end
+      this.currentIndex = 0
     }
   }
 
@@ -32,7 +32,9 @@ export class BookslideComponent {
     if (this.currentIndex > 0) {
       this.currentIndex--
     } else {
-      this.currentIndex = Math.floor(this.books.length / this.booksPerSlide)
+      // Go to the last slide by calculating the floor value based on booksPerSlide
+      const totalSlides = Math.ceil(this.books.length / this.booksPerSlide)
+      this.currentIndex = totalSlides - 1
     }
   }
 }

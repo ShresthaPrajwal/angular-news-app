@@ -17,11 +17,13 @@ export class BookService {
     return this.http.get(url).pipe(catchError(this.handleError))
   }
 
-  public getAllSpecificBooks(list: string): Observable<any> {
+  public getAllSpecificBooks(
+    list: string,
+    date: string = 'current'
+  ): Observable<any> {
     const url = `${this.BOOK_ENDPOINT}/lists/current/${list}.json?api-key=${this.apiKey}`
-    return this.http.get(url).pipe(catchError(this.handleError))
+    return this.http.get(url)
   }
-
   public fetchSpecificBookList(
     list: string,
     bestSellersDate?: string,
@@ -41,7 +43,7 @@ export class BookService {
       params = params.set('offset', offset.toString())
     }
     const url = `${this.BOOK_ENDPOINT}/lists.json?api-key=${this.apiKey}`
-    return this.http.get(url, { params }).pipe(catchError(this.handleError))
+    return this.http.get(url, { params })
   }
 
   public getFullOverview(publishedDate?: string): Observable<any> {

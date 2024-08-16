@@ -1,4 +1,24 @@
 <div>
+  <div class="genre-select">
+    <mat-form-field (click)="removeLabel()">
+      <mat-label *ngIf="!isClicked">Select Genre</mat-label>
+      <mat-select [(ngModel)]="selectedGenre" (selectionChange)="changeBook()">
+        <mat-option *ngFor="let genre of genres" [value]="genre.list_name">
+          {{ genre.list_name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
   <app-bookslide [books]="book1"></app-bookslide>
-  <app-bookslide [books]="book2"></app-bookslide>
+</div>
+<div *ngFor="let book of book1">
+  <app-booklarge
+    [rank]="book.rank"
+    [author]="book.author"
+    [description]="book.description"
+    [author]="book.author"
+    [imageUrl]="book.book_image"
+    [publisher]="book.publisher"
+    [amazonLink]="book.amazon_product_url"
+  ></app-booklarge>
 </div>

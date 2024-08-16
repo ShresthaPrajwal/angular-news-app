@@ -7,10 +7,33 @@ import { MatCardModule } from '@angular/material/card'
 import { MatGridListModule } from '@angular/material/grid-list'
 
 import { BookslideComponent } from './components/bookslide/bookslide.component'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatSelectModule } from '@angular/material/select'
+import { FormsModule } from '@angular/forms'
+import { BooklargeComponent } from './components/booklarge/booklarge.component'
+import { MatButtonModule } from '@angular/material/button'
 
 @NgModule({
-  declarations: [BookComponent, BookcardComponent, BookslideComponent],
-  imports: [CommonModule, MatCardModule, MatGridListModule],
-  exports: [BookComponent, BookcardComponent, BookslideComponent],
+  declarations: [
+    BookComponent,
+    BookcardComponent,
+    BookslideComponent,
+    BooklargeComponent,
+  ],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatSelectModule,
+    MatButtonModule,
+  ],
+  exports: [
+    BookComponent,
+    BookcardComponent,
+    BookslideComponent,
+    MatSelectModule,
+  ],
 })
 export class BooksModule {}
