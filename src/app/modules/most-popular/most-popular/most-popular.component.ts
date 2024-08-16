@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MostPopularService } from '../../../shared/services/news_services/most-popular.service';
+import { SnackbarService } from '../../../shared/services/snackbar-service/snackbar-service.service';
 
 @Component({
   selector: 'app-most-popular',
@@ -13,7 +14,7 @@ export class MostPopularComponent implements OnInit {
   public selectedPeriod: 'day' | 'week' | 'month' = 'day';
 
 
-  constructor(private mostPopularService: MostPopularService) {}
+  constructor(private mostPopularService: MostPopularService, private SnackBarService:SnackbarService) {}
   ngOnInit(): void {
     this.getMostPopularEmailedPerDay();
     this.getMostPopularEmailedPerMonth();
@@ -25,10 +26,11 @@ export class MostPopularComponent implements OnInit {
     this.mostPopularService.fetchMostPopularEmailed(1).subscribe(
       (data) => {
         this.mostPopularEmailedperDay = data.results.slice(10);
-        console.log('Fetched most popular emailed articles in a day:', this.mostPopularEmailedperDay);
+        this.SnackBarService.showMessage('Here are the top 10 most popular news');
       },
       (error) => {
-        console.error('Error fetching most popular emailed articles:', error);
+        this.SnackBarService.showMessage('Error in fetching the data');
+
       }
     );
   }
@@ -36,10 +38,9 @@ export class MostPopularComponent implements OnInit {
     this.mostPopularService.fetchMostPopularEmailed(7).subscribe(
       (data) => {
         this.mostPopularEmailedperWeek = data.results.slice(10);
-        console.log('Fetched most popular emailed articles in a week:', this.mostPopularEmailedperWeek);
       },
       (error) => {
-        console.error('Error fetching most popular emailed articles:', error);
+        this.SnackBarService.showMessage('Error in fetching the data');
       }
     );
   }
@@ -47,10 +48,9 @@ export class MostPopularComponent implements OnInit {
     this.mostPopularService.fetchMostPopularEmailed(30).subscribe(
       (data) => {
         this.mostPopularEmailedperMonth = data.results.slice(10);
-        console.log('Fetched most popular emailed articles in a month:', this.mostPopularEmailedperMonth);
       },
       (error) => {
-        console.error('Error fetching most popular emailed articles:', error);
+        this.SnackBarService.showMessage('Error in fetching the data');
       }
     );
   }

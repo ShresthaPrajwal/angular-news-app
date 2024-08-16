@@ -11,7 +11,7 @@ h1{
 .inner-container{
     margin: 3rem;
     background-color: white;
-    width: 80%;
+    width: 100%;
 }
 .toggle-group {
     display: flex;
@@ -20,13 +20,12 @@ h1{
   }
   
   .mat-button-toggle-group {
-    background: #f0f0f0;
-    border-radius: 4px;
+    // background: #f0f0f0;
+    border-radius: 10px;
   }
-  
   .articles-section {
     display: grid;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
   
@@ -61,7 +60,8 @@ h1{
   
   mat-card-subtitle {
     font-size: 0.9em;
-    color: #e43636;
+    color: #3d3c3c;
+    margin-left: 10%;
   }
   
   mat-card-content p {
@@ -70,10 +70,15 @@ h1{
   }
   
   img {
-    width: 100%;
-    height:fit-content;
+    margin-left: 80%;
+    width: 100px;
+    height:100px;
   }
-
+  .mat-snack-bar-container {
+    background-color: #333;
+    color: #fff; 
+  }
+  
 // .card {
 //     border: none;
 //     box-shadow: none;
