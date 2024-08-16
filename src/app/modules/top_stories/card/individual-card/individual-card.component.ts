@@ -10,5 +10,6 @@ export class IndividualCardComponent{
   @Input() public title?: string;
   @Input() public abstract?: string;
   @Input() public date?: string;
+  @Input() public url?: string;
   constructor(){}
 }

@@ -8,7 +8,9 @@
           [image]="story?.multimedia[0]?.url || ''"
           [title]="story?.title || ''"
           [abstract]="story?.abstract || ''"
-          [date]="story?.published_date || ''">
+          [date]="story?.published_date || ''"
+          [url]="story?.url"
+          >
         </app-individual-card>
       </div>
     </div>

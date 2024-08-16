@@ -37,3 +37,34 @@
   padding: 1rem;
 
 }
+
+.card-wrapper {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .card {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-wrapper:visited .card,
+  .card-wrapper:hover .card {
+    color: inherit;
+  }
+  
