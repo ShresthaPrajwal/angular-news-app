@@ -12,6 +12,7 @@ import { MatSelectModule } from '@angular/material/select'
 import { FormsModule } from '@angular/forms'
 import { BooklargeComponent } from './components/booklarge/booklarge.component'
 import { MatButtonModule } from '@angular/material/button'
+import { RouterModule } from '@angular/router'
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MatButtonModule } from '@angular/material/button'
     FormsModule,
     MatSelectModule,
     MatButtonModule,
+    RouterModule,
   ],
   exports: [
     BookComponent,

@@ -1,14 +1,23 @@
-div {
-  width: 90%;
+.book-main {
+  width: 80%;
   margin: 10px auto;
 }
 .genre-select {
   max-width: 300px;
-
+  justify-self: flex-end;
   .mat-mdc-form-field {
     width: 100%;
   }
 }
 .selection {
   width: 100%;
+}
+.book-header {
+  display: flex;
+  justify-content: space-between;
+}
+.trending-topic {
+  text-align: center;
+  background-color: white;
+  padding: 5px;
 }

@@ -23,16 +23,16 @@ mat-grid-tile {
 }
 
 app-bookcard {
-  width: 100%; /* Ensure the book card takes full width inside the grid tile */
-  max-width: 160px; /* You can adjust this based on the desired size of the book card */
+  width: 100%;
+  max-width: 160px;
 }
 
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
+
+  color: black;
   font-size: 30px;
   padding: 10px;
   border: none;
@@ -46,8 +46,4 @@ app-bookcard {
 
 .next-btn {
   right: 0;
-}
-
-.nav-btn:hover {
-  background-color: rgba(0, 0, 0, 0.5);
 }
