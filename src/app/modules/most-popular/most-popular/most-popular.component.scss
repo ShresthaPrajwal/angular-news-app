@@ -4,15 +4,15 @@
   background-color: #f6f8fc;
 }
 .inner-container {
-  margin: 3rem;
-  background-color: white;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 80%;
-  padding: 2em;
+  background-color: white;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem;
+  padding: 2em;
+  width: 80%;
 }
 
 .inner-card-container{
@@ -54,12 +54,12 @@
 }
 
 .article-card {
-  margin: 20px;
-  max-width: 800px;
-  max-height: 300px;
   border-radius: 8px;
-  overflow: hidden;
   cursor: pointer;
+  margin: 20px;
+  max-height: 300px;
+  max-width: 800px;
+  overflow: hidden;
 }
 
 mat-card {
